@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATE YOUR BUEISNESS PROFILE</title>
+    <script src="../static/js.project.js" defer></script>
+    <link rel="stylesheet" href="../static/css.project.css">
+    <script src="https://kit.fontawesome.com/b7e592bf84.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+      <nav class="navbar"> 
+        <div class="logo" id="logo"><img src="../static/Logo.png" class="nav1"></div>       
+      <ul class="nav-list">
+          <li ><a href="home.html"><i class="fa fa-fw fa-home" class="icon"></i><br> Home</a></li>
+          <li ><a href="about.html"><i class="fa-solid fa-circle-info" class="icon"></i><br> About Us</a></li>
+          <li > <a href="Search.html"><i class="fa fa-fw fa-search" class="icon"></i><br> Search</a></li> 
+        </ul>
+       <div class="reg-sign"> 
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; ">Sign Up</button>
+     
+  <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <form class="modal-content" action="home.html">
+      <div class="box">
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Enter Email" name="email" required>
+  
+        <label   for="psw"><b>Password</b></label>
+        <input id="pass" type="password" placeholder="Enter Password" name="psw" required >
+  
+        <label  for="psw-repeat"><b>Repeat Password</b></label>
+        <input id="confirm_pass" type="password" placeholder="Repeat Password" name="psw-repeat" required  onkeyup="validate_password()">
+      
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+  
+        <span id="wrong_pass_alert"></span>
+  
+        <div class="clearfix">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <button id="create" type="submit" class="signupbtn"  onclick="wrong_pass_alert()" >Sign Up</button>
+        </div>
+      </div>
+    </form>
+  </div>
+          <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Log In</button>
+  
+  <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <form class="modal-content" action="home.html">
+        <h1>Log In</h1>
+        <hr>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+  
+  
+        <div class="clearfix">
+          <button type="submit" class="signupbtn">Log In</button>
+        </div>
+      
+    </form>
+  </div> 
+    </nav> 
+
+        <h1 class="header"><b>CREATE YOUR BUEISNESS PROFILE</b>  </h1>
+        <div class="createBueisness">
+            <form action="home.html">
+                  
+                  <label for="email"><b>Email: </b></label>
+                  <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                  <br>
+                  <label for="psw"><b>Password: </b></label>
+                  <input id="passw" type="password" placeholder="Enter Password" name="psw" required>
+                  <br>
+                  <label for="psw-repeat"><b>Repeat Password: </b></label>
+                  <input id="confirm_passw" type="password" placeholder="Repeat Password" name="psw-repeat"  required onkeyup="validate_password2()">
+                  <br>
+                  <label for="Phone-number"><b>Phone-number: </b></label>
+                  <input type="text" placeholder="Enter phone-number" name="phone-number" id="phone-number" required>
+                  <br>
+                  <label for="City"><b>City </b></label>
+                  <input type="text" placeholder="Enter your city" name="City" id="city" required>
+                  <button class="findMe"  onclick="getCoordintes()"><b>Find Me!</b> </button>
+                  <br>
+                  <label for="language"><b>Languages: </b> </label>
+<select  id="language 1" name="language 1" >
+  <option value="--Chose an option--">--Chose an option--</option>
+  <option value="Hebrew">Hebrew</option>
+  <option value="English">English</option>
+  <option value="Russian">Russian</option>
+  <option value="Arabic">Arabic</option>
+  <option value="Amharic"></option>
+</select>   
+<select  id="language 2" name="language 2" >
+    <option value="--Chose an option--">--Chose an option--</option>
+    <option value="Hebrew">Hebrew</option>
+    <option value="English">English</option>
+    <option value="Russian">Russian</option>
+    <option value="Arabic">Arabic</option>
+    <option value="Amharic"></option>
+  </select>   
+  <select  id="language 3" name="language 3" >
+    <option value="--Chose an option--">--Chose an option--</option>
+    <option value="Hebrew">Hebrew</option>
+    <option value="English">English</option>
+    <option value="Russian">Russian</option>
+    <option value="Arabic">Arabic</option>
+    <option value="Amharic"></option>
+  </select>   
+  <br>
+  <label for="Service type 1"><b>Service type: </b> </label>
+<select  id="Service type" name="Service type 1" >
+    <option value="--Chose an option--">--Chose an option--</option>
+<option value="Apartments">Apartments</option>
+<option value="buildings">buildings</option>
+<option value="Villas">Villas</option>
+<option value="offices">offices</option>
+<option value="Post Construction">Post Construction</option>
+<option value="Air B&B">Air B&B</option>
+<option value="All">All</option>
+</select>   
+<select  id="Service type 2" name="Service type 1" >
+    <option value="--Chose an option--">--Chose an option--</option>
+    <option value="Apartments">Apartments</option>
+    <option value="buildings">buildings</option>
+    <option value="Villas">Villas</option>
+    <option value="offices">offices</option>
+    <option value="Post Construction">Post Construction</option>
+    <option value="Air B&B">Air B&B</option>
+    <option value="All">All</option>
+</select>   
+<select  id="Service type 2" name="Service type 1" >
+    <option value="--Chose an option--">--Chose an option--</option>
+    <option value="Apartments">Apartments</option>
+    <option value="buildings">buildings</option>
+    <option value="Villas">Villas</option>
+    <option value="offices">offices</option>
+    <option value="Post Construction">Post Construction</option>
+    <option value="Air B&B">Air B&B</option>
+    <option value="All">All</option>
+</select>   
+                  <hr>
+                  <span id="wrong_pass"></span>
+                  <button id="reg" type="submit" class="registerbtn"  onclick="wrong_pass_alert2()" >Registration</button>
+                </div>
+              
+              </form>
+        </div>
+     
+</body>
+</html>

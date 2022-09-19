@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="../static/js.project.js" defer></script>
+    <link rel="stylesheet" href="../static/css.project.css">
+</head>
+<script src="https://kit.fontawesome.com/b7e592bf84.js" crossorigin="anonymous"></script>
+
+  
+<body>
+    <div id="container">
+      <nav class="navbar"> 
+      <div class="logo" id="logo"><img src="../static/Logo.png" class="nav1"></div>       
+    <ul class="nav-list">
+        <li ><a href="home.html"><i class="fa fa-fw fa-home" class="icon"></i><br> Home</a></li>
+        <li ><a href="about.html"><i class="fa-solid fa-circle-info" class="icon"></i><br> About Us</a></li>
+        <li > <a href="Search.html"><i class="fa fa-fw fa-search" class="icon"></i><br> Search</a></li> 
+      </ul>
+     <div class="reg-sign"> 
+      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; ">Sign Up</button>
+   
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="home.html">
+    <div class="box">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label   for="psw"><b>Password</b></label>
+      <input id="pass" type="password" placeholder="Enter Password" name="psw" required>
+
+      <label  for="psw-repeat"><b>Repeat Password</b></label>
+      <input id="confirm_pass" type="password" placeholder="Repeat Password" name="psw-repeat" required  onkeyup="validate_password()">
+    
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <span id="wrong_pass_alert"></span>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button id="create" type="submit" class="signupbtn"   onclick="wrong_pass_alert()" >Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Log In</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+      <h1>Log In</h1>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">Log In</button>
+      </div>
+    
+  </form>
+</div> 
+  </nav> 
+  <h1 class="header"><b>LET US CLEAN YOUR MIND</b>  </h1> 
+
+  <div class="main">
+  <a href="Search.html"> <button onclick="" class="home-button"><span><b>FIND A MAID </b> </span>  </button></a>
+   <a href="sign-up-maid.html"><button class="home-button"><span> <b>CREATE YOUR BUEISNESS PROFILE</b></span> </button></a>
+</div>
+</div>
+</div>
+</body>
+</html>
