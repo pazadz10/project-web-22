@@ -1,0 +1,36 @@
+extends layout
+block body 
+  h1.header
+    b SIGN UP
+  .createBueisness
+    form(action="/InsertCustomer", method="post")
+      label(for='email')
+        b Email: 
+      input#email(type='text' placeholder='Enter Email' name='EMAIL' required='')
+      br
+      label(for='psw')
+        b Password: 
+      input#passw(type='password' placeholder='Enter Password' name='PASSWORD' required='' onkeyup='validate_password_length2()')
+      br
+      label(for='psw-repeat')
+        b Repeat Password: 
+      input#confirm_passw(type='password' placeholder='Repeat Password' name='PASSWORD-repeat' required='' onkeyup='validate_password2()')
+      br
+      label(for='full_name')
+        b Full Name:
+      input#full_name(type='text' placeholder='Enter full name' name='full_name' required='' )
+      br
+      label(for='Phone-number')
+        b Phone-number: 
+      input#phone-number(type='text' placeholder='Enter phone-number' name='phone_number' required='')
+      br
+      label(for='City')
+        b City 
+      div.inButton 
+       input#city(type='text' placeholder='Enter your city' name='City' required='')
+       button.findMe(onclick='getCoordintes()')
+         b Locate my city
+      br
+      span#wrong_pass
+      span#wrong_len 
+      button#reg.registerbtn(type='submit' onclick='wrong_pass_alert2()') Registration

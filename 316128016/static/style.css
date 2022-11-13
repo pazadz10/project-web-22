@@ -1,0 +1,595 @@
+body {
+    background-size: cover;
+    background-image: url(רקע.jpg);
+   
+    
+}
+ #container{
+    display: grid;
+    font-family: 'Calibri';
+    grid-template-areas:
+    'navbar'
+    'header'
+    'main' 
+    ;
+ }  
+
+a:link{
+  text-decoration-line: none;
+
+}
+
+    
+.navbar{
+    grid-area: navbar;
+    display: inline-block;
+    display: flex;
+    text-align: center;
+    height: 10vh;
+     justify-content: space-around;
+     align-items: center;
+     
+     
+     
+     
+     
+}
+ .nav-list li  {
+    
+    grid-area: header;
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    
+   
+  }
+  .nav-list{
+    padding-right: 100px;
+  }
+ 
+
+  .logo{
+    border: 20px;
+    
+    margin-top: 85px;
+    border-top: 20px;
+  }
+  #logo{
+    animation: logo;
+    animation-duration: 3.4s;
+    
+    
+  }
+  @keyframes logo{
+    from{opacity:0.1 ; }
+    to{ opacity: 1;}
+  }
+
+  .icon{
+    size: 30px;
+    display: flex;
+  }
+
+.header{
+    grid-area: header;
+    
+    text-align: center;
+    font-family: 'Calibri', serif;
+    color:#12be8e ;
+    font-size: 42px;
+    
+}
+.home-button{
+    grid-area: main;
+    background-color: #4887b7; /* Green background */
+    border: 1px solid rgb(0, 43, 128); /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    margin: 20px;
+    cursor: pointer; /* Pointer/hand icon */
+    width: 40%; /* Set a width if needed */
+    height: 45px;
+    display: block; /* Make the buttons appear below each other */
+    font-size: 1vw;
+    
+    
+    
+    
+}
+.main  {
+   padding-left: 35%;
+  
+}
+
+
+.button :active{
+  background-color: #04AA6D;
+}
+.reg-sign{
+ 
+  display: inline-block;
+  display: flex;
+  text-align: center;
+  
+   
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password],input[type=email],select {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  resize: vertical;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+#reg li {
+  display: inline-block;
+  background-color: #f44336;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+
+option {
+  font-size: 18px;
+  background-color: #ffffff;
+}
+
+option:before {
+  content: ">";
+  font-size: 20px;
+  display: none;
+  padding-right: 10px;
+  padding-left: 5px;
+  color: #fff;
+}
+.Active{
+  color: purple;
+  
+  
+}
+
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+
+/* Float cancel and signup buttons and add an equal width */
+ .signupbtn {
+  width: 100%;
+  background-color: #04AA6D;
+}
+.cancelbtn{
+  width: 100%;
+  background-color: red;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+.box{
+  padding: 16px;
+}
+.box.input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 8px;
+  padding-right: 0%;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+}
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn ,.navbar{
+     width: 100%;
+     padding-top: 10px;
+  }
+ 
+}
+.about-main {
+  height: 300px;
+  position: relative;
+  text-align: center;
+  color: black;
+}
+/* Top left text */
+.top-left {
+  color: #04AA6D;
+  position: absolute;
+  width: 30%;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  color: #04AA6D;
+  width: 20%;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom  */
+.buttom {
+  position: absolute;
+  bottom: 8px;
+  left: 30%;
+  
+}
+
+/* Centered text */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.search {
+  
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+  line-height: 40px;
+  width: 50%;
+
+}
+.createBueisness{
+  
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+  line-height: 40px;
+  width: 80%;
+}
+input[type=text], select {
+  
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.findMe{
+  width: auto;
+  background-color: #0476aa;
+  
+  
+}
+
+input[type=button] {
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 0 0.5em;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+  height: 40px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+input[type=button]:hover {
+  background: rgb(235, 235, 235);
+}
+input[type=button].button-primary {
+  background-color: #1a73e8;
+  color: white;
+}
+input[type=button].button-primary:hover {
+  background-color: #1765cc;
+}
+input[type=button].button-secondary {
+  background-color: white;
+  color: #1a73e8;
+}
+input[type=button].button-secondary:hover {
+  background-color: #d2e3fc;
+}
+
+
+
+@media screen and (max-width: 700px) {
+ .logo{
+  display: none;
+ }
+ .home-button{
+  font-size: 1vh;
+  width: 70%
+  }
+}
+
+@media screen and (max-width: 600px) {
+  *{
+    font-size: 10px;
+    
+  }
+  .nav-list{
+    display: inline-block;
+    font-size: 2%;
+    padding: 2px;
+  }
+  .icon{
+    size: 2%;
+  }
+}
+@media screen and (max-width: 800px) {
+  *{
+    font-size: 14px;
+    
+  }
+  }
+  .nav-list{
+    display: inline-block;
+    font-size: 2%;
+    padding: 2px;
+  }
+  .icon{
+    size: 2%;
+  }
+  
+
+@media screen and (max-width: 570px) {
+  *{
+    font-size: 10px;
+    
+  }
+  .nav-list{
+    display: inline-block;
+    font-size: 2%;
+    padding: 2px;
+  }
+
+  .icon{
+    size: 2%;
+  }
+  .home-button{
+    font-size: 1vh;
+    width: 70%
+    }
+  
+}
+@media screen and (max-width: 300px) {
+  .nav-list{
+    display: inline-block;
+    font-size: 1%;
+    
+  }
+  .icon{
+    size: 1%;
+  }
+  .home-button{
+    font-size: 1vh;
+    width: 80%
+    }
+}
+@media screen and (max-width: 600px) {
+  *{
+    font-size: 13px;
+    
+  
+  }
+  .nav-list{
+    display: inline-block;
+    font-size: 2%;
+    padding: 2px;
+  }
+  .icon{
+    size: 2%;
+    
+  }
+  .home-button{
+font-size: 1vh;
+width: 70%;
+  }
+}
+@media screen and (max-width: 500px) {
+  *{
+    font-size: 13px;
+    
+  
+  }
+ 
+  .home-button{
+font-size: 1vh;
+width: 70%;
+  }
+
+}
+
+.result{
+  width:80% ;
+  padding: 10px;
+  font-size: larger;
+  border-top: 1px solid rgba(0, 85, 255, 0.644);
+  border-bottom: 1px solid rgba(0, 85, 255, 0.644);
+  display: inline ;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+  background-position-y: 70%;
+
+}
+#FullName{
+  font-family: 'Calibri', sans-serif;
+ 
+}
+
+.alert{
+  color: rgba(10, 6, 110, 0.921);
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 7%;
+  font-family: 'Calibri';
+}
+.profilePage{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ margin: auto;
+  padding: 5px;
+  width: 20%;
+  background-color: whitesmoke;
+  text-align: justify;
+  font-family: Geneva, Verdana, sans-serif;
+  border: 2px solid #168189;
+}
+.logout{
+  background-color: rgba(128, 18, 18, 0.816);
+  
+}
+.inButton{
+
+position: relative;
+
+}
+.findMe{
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+  right: 0px;
+  z-index: 2;
+  border: none;
+  top: 2px;
+  height: 70%;
+  width: 20%;
+  cursor: pointer;
+  color: white;
+  background-color: #416f9da2;
+  
+}
+.update{
+  width: 100%;
+  
+}
+.delete{
+  background-color: rgb(141, 51, 51);
+}
+.res{
+  font-size: 20px;
+  font-family: 'Calibri';
+  font-weight: bold;
+}

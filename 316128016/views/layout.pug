@@ -1,0 +1,60 @@
+doctype html 
+html 
+ head
+     meta(charset='UTF-8')
+     meta(http-equiv='X-UA-Compatible' content='IE=edge')
+     meta(name='viewport' content='width=device-width, initial-scale=1.0')
+     title Home
+     script(src='js.project.js' defer='') 
+     script(src='https://kit.fontawesome.com/b7e592bf84.js' crossorigin='anonymous')
+     link(rel="stylesheet", href="style.css")
+body 
+  #container
+  nav.navbar
+    #logo.logo
+      img.nav1(src='Logo.png')
+    ul.nav-list
+      li
+        a(href='Home')
+          i.fa.fa-fw.fa-home
+          br
+          |  Home
+      li
+        a(href="About") 
+          i.fa-solid.fa-circle-info
+          br
+          |  About Us
+      li
+        a(href='Search')
+          i.fa.fa-fw.fa-search
+          br
+          |  Search
+      li
+        a(href='profile' method='post')
+          i.fas.fa-user-circle
+          br
+          |  Profile 
+    .reg-sign
+      button(onclick="document.getElementById('id01').style.display='block'" style='width:auto; ') Log In
+      #id01.modal
+        span.close(onclick="document.getElementById('id01').style.display='none'" title='Close Modal') &times;
+        form.modal-content(action='/Login',method="post")
+          .box
+            h1 Log In 
+            hr
+            label(for='email')
+              b Email
+            input(type='text' placeholder='Enter Email' name='EMAIL' required='')
+            label(for='psw')
+              b Password
+            input#pass(type='password' placeholder='Enter Password' name='PASSWORD'  onkeyup='validate_password_length()' required='')
+            span#pass_val 
+            label(for='login')
+              button#create.signupbtn(type='submit') Log In
+      form(action="/logout", method="post")
+       label(for='logout')
+       button.logout(style='width:auto;') Log out 
+  h2.alert #{alert}
+ 
+block body 
+          

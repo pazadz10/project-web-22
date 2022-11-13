@@ -1,0 +1,34 @@
+extends layout
+block body 
+ h1.header My Profile  
+ div.profilePage
+   each n in pple
+     h4="Full name: " +n.FULLNAME 
+     h4="Email: "+n.EMAIL 
+     h4="Phone number: "+n.PHONE   
+     h4="City: "+n.CITY 
+     button.update(onclick="document.getElementById('update').style.display='block'" ) change
+     #update.modal
+       span.close(onclick="document.getElementById('update').style.display='none'" title='Close Modal') &times;
+       form.modal-content(action='/update',method="post")
+          .box
+            h1 update 
+            hr
+            label(for='psw')
+              b Password
+            input#pass(type='password' value=n.PASSWORD name='PASSWORD' )
+            label(for='phone_number')
+              b phone
+            input(type='text' value=n.PHONE name='phone_number' )
+            label(for='CITY')
+              b CITY
+            input(type='text' value=n.CITY name='CITY' )
+            label(for='name')
+              b name
+            input(type='text' value=n.FULLNAME name='FULLNAME' )
+            label(for='submit')
+              button#update(type='submit') 
+                b Update
+     form(action='/deleteCustomer',method="post")
+      button.delete(type='submit' ) Delete account
+       

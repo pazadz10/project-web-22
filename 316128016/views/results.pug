@@ -1,0 +1,18 @@
+extends layout 
+block body
+    h1 #{var1}      
+    each n in pple
+      div(class='result')
+        h4#FullName=n.FULL_NAME 
+        div.res Email
+          br 
+          span=n.EMAIL   
+        div.res Phone Number 
+          br 
+          span=n.PHONE 
+        div.res City 
+          br 
+          span=n.CITY 
+        
+          
+            

@@ -1,0 +1,35 @@
+extends layout
+block body 
+  h1.header
+    b What are you looking for? 
+  form#searchForm.search(action="/ShowAllCustomers", method="post")
+    label(for='Service type ')
+      b Service type: 
+    select(id='ServiceType' name='ServiceType')
+      option(value='--Chose an option--') --Chose an option--
+      option(value='Apartments') Apartments
+      option(value='buildings') buildings
+      option(value='Villas') Villas
+      option(value='offices') offices
+      option(value='Post Construction') Post Construction
+      option(value='Air B&B') Air B&amp;B
+      option(value='All') All
+    br
+    label(for='language')
+      b Languages: 
+    select(id='language' name='language')
+      option(value='--Chose an option--') --Chose an option--
+      option(value='Hebrew') Hebrew
+      option(value='English') English
+      option(value='Russian') Russian
+      option(value='Arabic') Arabic
+      option(value='Amharic') Amharic
+      option(value='All') All
+    label(for='city')
+      b City: 
+    div.inButton 
+     input#city(type='text' placeholder='Enter your city' name='city' required='')
+     button.findMe(onclick='getCoordintes()')
+      b Locate my city
+    br
+    input.signupbtn(type='submit' value='Search')
